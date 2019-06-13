@@ -1,11 +1,198 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
 
+<!-- Head -->
 <head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</style>
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<style>
+    .title {
+      height: 250px;
+      background-color: white;
+      position:absolute;
+    	top:0px;
+      right:0px;
+      left:0px;
+      margin:auto;
+		}
+		.about {
+			height: 300px;
+			background-color: white;
+			position:absolute;
+			top:280px;
+      right:0px;
+      left:0px;
+			margin:auto;
+		}
+    .titlemargins {
+      margin: 70px;
+    }
+    .basictext {
+      margin: 40px 200px;
+    }
+		.factors {
+			height: 680px;
+			background-color: white;
+			position:absolute;
+			top:610px;
+      right:0px;
+      left:0px;
+			margin:auto;
+		}
+		.center {
+      position:absolute;
+      left:50%;
+      top:50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+		}
+		.factorimage {
+			position:absolute;
+    	left:0px;
+    	top:150px;
+			margin:auto;
+			max-width:60%;
+      max-height:60%;
+      align:"left";
+		}
+		.factortext {
+			position:absolute;
+    	right:0px;
+    	top:100px;
+			margin:auto;
+		}
+    .observations {
+      height: 1970px;
+      background-color: white;
+      position:absolute;
+      left:0px;
+      right:0px;
+      top:1320px;
+      margin:auto;
+    }
+    .model {
+      height: 800px;
+      background-color: white;
+      position:absolute;
+      left:0px;
+      right:0px;
+      top:3320px;
+      margin:auto;
+    }
+    .modelimage {
+      position:absolute;
+    	left:50px;
+      right:50px;
+    	top:110px;
+      max-width: 100%;
+      max-height: 100%;
+      height: 600px;
+      width: auto;
+			margin:auto;
+      overflow: scroll;
+    }
+    .downloadbtn {
+      position:absolute;
+    	left:50px;
+      right:50px;
+    	top:730px;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: scroll;
+    }
+    .picrows {
+      position:absolute;
+      margin:0px 200px;
+    }
+		.parallax {
+    	/* The image used */
+    	background-image: url("background.jpg");
+    	/* Set a specific height */
+    	height: 500px;
+    	/* Create the parallax scrolling effect */
+    	background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		}
+		/* Adds a shadow on containers */
+		.shadow {
+  			box-shadow: 0px 6px 10px black;
+		}
+		/* Border */
+		.myborder {
+			border: 1px solid black;
+		}
+	</style>
+
+    <title>Kaggle Dataset Analysis</title>
 </head>
 
-<body>
+<!-- Body -->
+<body class = "parallax">
+	<div class = "title">
+    <div class = "titlemargins">
+      <h1 class = "text-center"><bold><font face = "Verdana" size = "30">Kaggle Dataset Analysis</font></bold></h1>
+		  <h2 class = "text-center"><font face = "Verdana" size = "5">By Mining for the Minors</font></h2>
+    </div>
+	</div>
 
-<h2>My first webpage!</h2>
+	<div class = "about">
+    <div class = "basictext">
+      <h1 class = "text-center"><bold><font face = "Verdana" size = "20">About</font></bold></h1>
+		  <p class = "text-center">For our project, we used a Kaggle dataset of Kaggle datasets which include attributes like dataset size, topic count, license, competition count, type and a boolean value for whether or not the dataset is featured. We used these values to create a decision tree that helps a user posting is dataset see whether or not their dataset will be featured. In particular, we encoded the dataset size, topic count, and competition count to help determine this status. Having a dataset featured determines its success as it will be easily accessible to all users, so being able to predict this using certain attributes will play a big role in helping a dataset developer determine the success of their dataset.</p>
+    </div>
+  </div>
+
+	<div class = "factors">
+    <div class = "basictext">
+      <h1 class = "text-center"><bold><font face = "Verdana" size = "20">Factors</font></bold></h1>
+      <p class = "text-center">The factors we used in the prediction of kaggle dataset success are dataset size, topic count, and competition count. We chose these values because the user has control over them and therefore can manipulate them in order to achieve featured status.</p>
+    </div>
+    <div class = "picrows">
+      <p><img src = "1.png" alt="factors" style="width:100px;height:100px;margin-right: 20px;float:left"><strong>Featured</strong><br/>Featured datasets appear on the main dataset page on the Kaggle webiste which may lead to more views/downloads/uses.</p>
+      <br/>
+      <p><img src = "2.png" alt="factors" style="width:100px;height:100px;margin-right: 20px;float:left"><strong>Dataset Size</strong><br/>The dataset size is simply the amount of rows by columns in a table.</p>
+      <br/>
+      <br/>
+      <p><img src = "3.png" alt="factors" style="width:100px;height:100px;margin-right: 20px;float:left"><strong>Topic Count</strong><br/>The topic count is the amount of topics a dataset is linked to. Topics are specific keywords and phrases that pertain to the given dataset.</p>
+      <br/>
+      <p><img src = "4.png" alt="factors" style="width:100px;height:100px;margin-right: 20px;float:left"><strong>Competition Count</strong><br/>The amount of competitions a dataset belongs to. Datasets can be associated with Kaggle competitions and may encourage users to view/download/use the dataset.</p>
+    </div>
+  </div>
+
+  <div class = "observations">
+    <div class = "basictext">
+		  <h1 class = "text-center"><bold><font face = "Verdana" size = "20">Observations</font></bold></h1>
+		  <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 100%; height: 1827px;'><object class='tableauViz' width='100%' height='1827' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;ds3001project' /><param name='name' value='kaggledatasetanalysis&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+    </div>
+	</div>
+
+  <div class = "model">
+    <div class = "basictext">
+		  <h1 class = "text-center"><bold><font face = "Verdana" size = "20">Decision Tree</font></bold></h1>
+      <div class="modelimage myborder">
+        <img src="decisionTree.png"/>
+      </div>
+      <div class="downloadbtn">
+        <form method="get" action="decisionTree.png">
+          <button class="btn" style="width:100%;height:40px;background-color:white;color:black;border:1px solid black"><i class="fa fa-download"></i> Download Tree</button>
+        </form>
+      </div>
+		</div>
+	</div>
 
 </body>
 </html>
